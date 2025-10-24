@@ -1,0 +1,417 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><a name="_GoBack"></a>&nbsp;</p>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html lang=&quot;en&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>&lt;meta charset=&quot;UTF-8&quot; /&gt;</p>
+
+<p class=MsoNormal>&lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1&quot; /&gt;</p>
+
+<p class=MsoNormal>&lt;title&gt;Simple Online Quiz&lt;/title&gt;</p>
+
+<p class=MsoNormal>&lt;style&gt;</p>
+
+<p class=MsoNormal>  body {</p>
+
+<p class=MsoNormal>    font-family: Arial, sans-serif;</p>
+
+<p class=MsoNormal>    background: #f4f4f9;</p>
+
+<p class=MsoNormal>    margin: 0;</p>
+
+<p class=MsoNormal>    padding: 0;</p>
+
+<p class=MsoNormal>    display: flex;</p>
+
+<p class=MsoNormal>    justify-content: center;</p>
+
+<p class=MsoNormal>    align-items: center;</p>
+
+<p class=MsoNormal>    height: 100vh;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  #quiz-container {</p>
+
+<p class=MsoNormal>    background: white;</p>
+
+<p class=MsoNormal>    width: 400px;</p>
+
+<p class=MsoNormal>    padding: 20px 30px;</p>
+
+<p class=MsoNormal>    box-shadow: 0 2px 10px rgba(0,0,0,0.1);</p>
+
+<p class=MsoNormal>    border-radius: 8px;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  h2 {</p>
+
+<p class=MsoNormal>    margin-top: 0;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  .question {</p>
+
+<p class=MsoNormal>    margin-bottom: 15px;</p>
+
+<p class=MsoNormal>    font-weight: bold;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  .choices {</p>
+
+<p class=MsoNormal>    list-style: none;</p>
+
+<p class=MsoNormal>    padding: 0;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  .choices li {</p>
+
+<p class=MsoNormal>    margin-bottom: 10px;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  .choices label {</p>
+
+<p class=MsoNormal>    cursor: pointer;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  button {</p>
+
+<p class=MsoNormal>    background-color: #5c6bc0;</p>
+
+<p class=MsoNormal>    color: white;</p>
+
+<p class=MsoNormal>    border: none;</p>
+
+<p class=MsoNormal>    padding: 10px 15px;</p>
+
+<p class=MsoNormal>    font-size: 16px;</p>
+
+<p class=MsoNormal>    border-radius: 5px;</p>
+
+<p class=MsoNormal>    cursor: pointer;</p>
+
+<p class=MsoNormal>    margin-top: 10px;</p>
+
+<p class=MsoNormal>    width: 100%;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  button:hover {</p>
+
+<p class=MsoNormal>    background-color: #3949ab;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  #result {</p>
+
+<p class=MsoNormal>    text-align: center;</p>
+
+<p class=MsoNormal>    font-size: 20px;</p>
+
+<p class=MsoNormal>    margin-top: 15px;</p>
+
+<p class=MsoNormal>    font-weight: bold;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body&gt;</p>
+
+<p class=MsoNormal>  &lt;div id=&quot;quiz-container&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;h2&gt;Quiz Application&lt;/h2&gt;</p>
+
+<p class=MsoNormal>    &lt;div id=&quot;quiz&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;!-- Quiz questions will be injected here --&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;button
+id=&quot;submit-btn&quot;&gt;Submit&lt;/button&gt;</p>
+
+<p class=MsoNormal>    &lt;div id=&quot;result&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;script&gt;</p>
+
+<p class=MsoNormal>  const quizData = [</p>
+
+<p class=MsoNormal>    {</p>
+
+<p class=MsoNormal>      question: &quot;What does HTML stand for?&quot;,</p>
+
+<p class=MsoNormal>      choices: [</p>
+
+<p class=MsoNormal>        &quot;Hyper Text Markup Language&quot;,</p>
+
+<p class=MsoNormal>        &quot;Hyperlinks and Text Markup Language&quot;,</p>
+
+<p class=MsoNormal>        &quot;Home Tool Markup Language&quot;,</p>
+
+<p class=MsoNormal>        &quot;Hyper Tool Multi Language&quot;</p>
+
+<p class=MsoNormal>      ],</p>
+
+<p class=MsoNormal>      correct: 0</p>
+
+<p class=MsoNormal>    },</p>
+
+<p class=MsoNormal>    {</p>
+
+<p class=MsoNormal>      question: &quot;Which language is used for styling web
+pages?&quot;,</p>
+
+<p class=MsoNormal>      choices: [&quot;HTML&quot;, &quot;JQuery&quot;, &quot;CSS&quot;,
+&quot;XML&quot;],</p>
+
+<p class=MsoNormal>      correct: 2</p>
+
+<p class=MsoNormal>    },</p>
+
+<p class=MsoNormal>    {</p>
+
+<p class=MsoNormal>      question: &quot;Which is not a JavaScript
+Framework?&quot;,</p>
+
+<p class=MsoNormal>      choices: [&quot;Python Script&quot;,
+&quot;JQuery&quot;, &quot;Django&quot;, &quot;NodeJS&quot;],</p>
+
+<p class=MsoNormal>      correct: 2</p>
+
+<p class=MsoNormal>    },</p>
+
+<p class=MsoNormal>    {</p>
+
+<p class=MsoNormal>      question: &quot;Which company developed
+JavaScript?&quot;,</p>
+
+<p class=MsoNormal>      choices: [&quot;Netscape&quot;, &quot;Bell Labs&quot;,
+&quot;Sun Microsystems&quot;, &quot;IBM&quot;],</p>
+
+<p class=MsoNormal>      correct: 0</p>
+
+<p class=MsoNormal>    },</p>
+
+<p class=MsoNormal>    {</p>
+
+<p class=MsoNormal>      question: &quot;Inside which HTML element do we put
+the JavaScript?&quot;,</p>
+
+<p class=MsoNormal>      choices: [&quot;&lt;js&gt;&quot;,
+&quot;&lt;script&gt;&quot;, &quot;&lt;javascript&gt;&quot;,
+&quot;&lt;scripting&gt;&quot;],</p>
+
+<p class=MsoNormal>      correct: 1</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>  ];</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  const quizContainer = document.getElementById('quiz');</p>
+
+<p class=MsoNormal>  const submitBtn = document.getElementById('submit-btn');</p>
+
+<p class=MsoNormal>  const resultDiv = document.getElementById('result');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  function loadQuiz() {</p>
+
+<p class=MsoNormal>    const output = quizData.map((item, index) =&gt; {</p>
+
+<p class=MsoNormal>      const choicesHtml = item.choices.map((choice, i) =&gt;</p>
+
+<p class=MsoNormal>        `&lt;li&gt;</p>
+
+<p class=MsoNormal>          &lt;label&gt;</p>
+
+<p class=MsoNormal>            &lt;input type=&quot;radio&quot;
+name=&quot;question${index}&quot; value=&quot;${i}&quot; /&gt;</p>
+
+<p class=MsoNormal>            ${choice}</p>
+
+<p class=MsoNormal>          &lt;/label&gt;</p>
+
+<p class=MsoNormal>        &lt;/li&gt;`</p>
+
+<p class=MsoNormal>      ).join('');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      return `</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;question-block&quot;&gt;</p>
+
+<p class=MsoNormal>          &lt;p class=&quot;question&quot;&gt;${index + 1}.
+${item.question}&lt;/p&gt;</p>
+
+<p class=MsoNormal>          &lt;ul
+class=&quot;choices&quot;&gt;${choicesHtml}&lt;/ul&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>      `;</p>
+
+<p class=MsoNormal>    }).join('');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    quizContainer.innerHTML = output;</p>
+
+<p class=MsoNormal>    resultDiv.innerHTML = '';</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  function showResult() {</p>
+
+<p class=MsoNormal>    let score = 0;</p>
+
+<p class=MsoNormal>    quizData.forEach((item, index) =&gt; {</p>
+
+<p class=MsoNormal>      const selected =
+document.querySelector(`input[name=question${index}]:checked`);</p>
+
+<p class=MsoNormal>      if (selected &amp;&amp; parseInt(selected.value) ===
+item.correct) {</p>
+
+<p class=MsoNormal>        score++;</p>
+
+<p class=MsoNormal>      }</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    resultDiv.innerHTML = `You scored ${score} out of
+${quizData.length}`;</p>
+
+<p class=MsoNormal>    submitBtn.disabled = true;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  submitBtn.addEventListener('click', () =&gt; {</p>
+
+<p class=MsoNormal>    const allAnswered = quizData.every((item, index) =&gt;</p>
+
+<p class=MsoNormal>      document.querySelector(`input[name=question${index}]:checked`)</p>
+
+<p class=MsoNormal>    );</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    if (!allAnswered) {</p>
+
+<p class=MsoNormal>      alert('Please answer all questions before
+submitting.');</p>
+
+<p class=MsoNormal>      return;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    showResult();</p>
+
+<p class=MsoNormal>  });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  loadQuiz();</p>
+
+<p class=MsoNormal>&lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
+</body>
+
+</html>
